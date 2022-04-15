@@ -1,3 +1,7 @@
+const graphqlUrl = process.env.GRAPHQL_URL || 'http://localhost:4000/graphql'
+const websocketUrl =
+  process.env.WEBSOCKET_URL || 'ws://localhost:4000/subscriptions'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -31,6 +35,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/apollo'],
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: graphqlUrl,
+        wsEndpoint: websocketUrl,
+      },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
