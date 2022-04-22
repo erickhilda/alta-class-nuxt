@@ -1,0 +1,7 @@
+query todosQuery($is_done: Boolean) {
+  todos(where: { is_done: { _eq: $is_done } }) {
+    is_done
+    title
+    id
+  }
+}
