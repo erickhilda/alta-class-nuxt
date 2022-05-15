@@ -3,6 +3,7 @@ const websocketUrl =
   process.env.WEBSOCKET_URL || 'ws://localhost:4000/subscriptions'
 
 export default {
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'alta-nuxt',
