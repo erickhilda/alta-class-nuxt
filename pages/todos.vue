@@ -121,6 +121,7 @@ export default {
         placeholder="What need to be done"
         autocomplete="off"
       />
+      <button type="submit">Add Todo</button>
     </form>
     <div>
       <label>
